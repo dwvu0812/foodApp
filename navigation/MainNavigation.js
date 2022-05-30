@@ -67,7 +67,7 @@ export default function MainNavigation() {
       <Stack.Navigator screenOptions={{
         header: () => null,
       }}>
-        {/* <Stack.Screen name="SlideScreen" component={SlideScreen} /> */}
+        <Stack.Screen name="SlideScreen" component={SlideScreen} />
 
         <Stack.Screen name="Home" component={HomeScreen} /> 
         <Stack.Screen name="Login" component={LoginScreen} /> 

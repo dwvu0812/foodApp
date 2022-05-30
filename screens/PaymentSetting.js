@@ -28,7 +28,9 @@ export default function PaymentSetting({navigation}) {
         setData(JSON.parse(value));
         // console.log(data);
       }
-      return;
+      return () => {
+        AsyncStorage.removeItem('cardInfo')
+      }
     });
   });
 
@@ -86,7 +88,7 @@ export default function PaymentSetting({navigation}) {
         />
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate('AddCreditCard')}>
+      <TouchableOpacity >
         <FlatList
           keyExtractor={(item, index) => index.toString()}
           data={data}
